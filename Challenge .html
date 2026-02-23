@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mehret Restaurant</title>
   <link rel="stylesheet" href="ch.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -60,10 +63,12 @@
 
     <section id="images">
       <h2>Our Delicious Dishes</h2>
+      <p>Photos from the web and AI-generated creations</p>
       <div class="carousel">
-        <img src="https://via.placeholder.com/400x250?text=Dish+1" alt="Dish 1" />
-        <img src="https://via.placeholder.com/400x250?text=Dish+2" alt="Dish 2" class="hidden" />
-        <img src="https://via.placeholder.com/400x250?text=Dish+3" alt="Dish 3" class="hidden" />
+        <img src="https://source.unsplash.com/400x250/?ethiopian,food" alt="Ethiopian dish" />
+        <img src="https://picsum.photos/400/250?grayscale" alt="AI styled dish" class="hidden" />
+        <img src="https://source.unsplash.com/400x250/?spices,curry" alt="Spicy dish" class="hidden" />
+        <img src="https://via.placeholder.com/400x250?text=AI+Generated" alt="AI generated placeholder" class="hidden" />
       </div>
     </section>
 
@@ -103,7 +108,7 @@
         <input type="text" id="name" placeholder="Enter your name" required />
         <label for="email">Email:</label>
         <input type="email" id="email" placeholder="mehret@gmail.com" required />
-        <button type="submit">Send</button>
+        <button type="submit" style="background:#e91e63;color:#fff;border:none;padding:10px;cursor:pointer;">Send</button>
       </form>
     </section>
   </main>
