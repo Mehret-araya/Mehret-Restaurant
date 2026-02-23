@@ -14,13 +14,16 @@
   <header>
     <h1>Welcome to Mehret Restaurant</h1>
     <p>Delicious food. Warm service. Affordable prices.</p>
-    <nav>
+    <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav id="nav-menu">
       <a href="#menu">Menu</a>
       <a href="#images">Gallery</a>
       <a href="#branchs">Branches</a>
       <a href="#offers">Offers</a>
       <a href="#contact">Contact</a>
     </nav>
+    <!-- theme toggle control -->
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </header>
 
   <main>
@@ -72,6 +75,10 @@
 
     <section id="branchs">
       <h2>Our Branches</h2>
+      <!-- simple map embed for the first branch -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=9.0355,38.7636&z=15&output=embed" title="Map to Bole Branch"></iframe>
+      </div>
       <div class="branch">
         <h3>Bole Branch</h3>
         <ul>
@@ -114,7 +121,11 @@
   <footer>
     <h1>Author: Mehret</h1>
     <p>Address: Addis Ababa, Ethiopia</p>
-    <p>;&copy; 2026 Mehret Restaurant</p>
+    <p>;&copy; <span id="year"></span> Mehret Restaurant</p>
+    <div class="social">
+      <a href="https://facebook.com" aria-label="Facebook">📘</a>
+      <a href="https://instagram.com" aria-label="Instagram">📸</a>
+    </div>
     <small><a href="mailto:mehret@gmail.com">mehret@gmail.com</a></small>
   </footer>
 

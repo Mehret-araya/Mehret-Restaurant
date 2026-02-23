@@ -96,3 +96,38 @@ branchHeaders.forEach(h => {
     }, 3000);
   }
 })();
+
+// theme toggle (dark/light mode) with localStorage
+const themeToggle = document.getElementById('theme-toggle');
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    document.body.classList.remove('dark');
+    themeToggle.textContent = '🌙';
+  }
+}
+
+// initialize theme from storage
+let stored = localStorage.getItem('theme');
+if (stored !== 'dark' && stored !== 'light') {
+  // default to system preference
+  stored = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+applyTheme(stored);
+
+themeToggle.addEventListener('click', () => {
+  const newTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+  applyTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
+// mobile nav toggle
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+}

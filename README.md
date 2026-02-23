@@ -12,6 +12,8 @@ This repository contains a simple static landing page for the fictional **Mehret
 - **Branch information** with click-to-toggle details
 - **Contact form** with client-side validation
 - **Simple carousel** cycling through gallery images every 3 seconds
+- **Dark/light mode toggle** with preference saved in localStorage
+- **Mobile-friendly navigation** including a hamburger menu on small screens
 - Styles applied via `ch.css`; behavior handled in `script.js`
 - Smooth scrolling and utility helpers
 
